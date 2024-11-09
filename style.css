@@ -1,0 +1,255 @@
+/* Reset some basic styling for better layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 950px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.input-container p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.radio-option {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-option span {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.radio-option input[type="radio"]:checked + span {
+  background: #ff8a65;
+  color: #fff;
+}
+
+.radio-option:hover span {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Wrapper for Generate Random Date and Reveal Day of the Week buttons */
+.button-group {
+  display: flex; /* Align buttons in a row */
+  justify-content: center; /* Centers the buttons horizontally */
+  margin-top: 20px; /* Adds space above the button group */
+}
+
+
+#generateRandomDateButton, #revealDayOfWeekButton {
+  display: block; /* Move the button to a new line */
+  margin-top: 15px; /* Space between the previous buttons */
+  margin: 15px auto 0; /* Centers the button and adds margin at the top */
+  padding: 10px;
+}
+
+
+#generateRandomDateButton {
+  display: block; /* Move the button to a new line */
+  margin-top: 15px; /* Space between the previous buttons */
+  margin: 15px auto 0; /* Centers the button and adds margin at the top */
+  padding: 10px;
+}
+
+.action-button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #4e54c8;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+  background-color: #8f94fb;
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 2.5em;
+  color: #fff;
+  
+}
+
+/* Styling for the flashing day of the week */
+.day-flash {
+  font-size: 4em;          /* Extra large font size */
+  font-weight: bold;       /* Make it bold */
+  color: #0a0786;          /* blue color */
+  margin-top: 15px;
+  animation: flash 1s infinite alternate; /* Flashing animation */
+}
+
+/* Keyframes for flashing effect */
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Styling for the calendar container */
+.calendar {
+  display: grid; /* Use grid layout for the calendar */
+  grid-template-columns: repeat(2, 1fr); /* 4 columns per row */
+  gap: 15px; /* Space between the months */
+  margin-top: 20px;
+  padding: 10px;
+  /*background-color: #222; /* Background color for consistency */
+  /*border: 1px solid #444; /* Border around the calendar */
+  border-radius: 5px; /* Rounded corners */
+  color: #fff; /* Text color */
+}
+
+/* Styling for each month */
+.calendar .month {
+  padding: 10px;
+  /*background-color: #333; /* Background for individual month */
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+/* Each month container */
+.month {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #8f94fb;
+  border-radius: 8px;
+}
+
+/* Month name styling */
+.month h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #4e54c8;
+}
+
+/* Days grid styling */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* Day name and day cell styling */
+.day-name, .day {
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.day-name {
+  background-color: #4e54c8;
+}
+
+.day {
+  background-color: #4e54c8;
+}
+
+.empty {
+  background-color: transparent;
+}
+
+/* Tab styling */
+.tab-buttons {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+/* Top-aligned Tab buttons */
+.tab-buttons {
+  display: flex;
+  width: 500px; /* Matches the container width */
+  max-width: 100%;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #4e54c8;
+  color: #fff;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.tab-button.active {
+  background-color: #4e54c8;
+  color: #fff;;
+}
+
+.tab-button:hover {
+  background-color: #8f94fb;
+  transform: scale(1.05);
+}
+
+/* Content display for the tabs */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.day-flash {
+  font-size: 4em;
+  font-weight: bold;
+  color: #3728a7;
+  animation: flash 1s infinite alternate;
+}
