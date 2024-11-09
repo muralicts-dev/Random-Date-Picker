@@ -22,8 +22,8 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 950px;
+  width: 70%;
+  max-width: 800px;
 }
 
 h1 {
@@ -107,14 +107,14 @@ h1 {
 
 .result {
   margin-top: 20px;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #fff;
   
 }
 
 /* Styling for the flashing day of the week */
 .day-flash {
-  font-size: 4em;          /* Extra large font size */
+  font-size: 2em;          /* Extra large font size */
   font-weight: bold;       /* Make it bold */
   color: #0a0786;          /* blue color */
   margin-top: 15px;
