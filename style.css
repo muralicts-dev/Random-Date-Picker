@@ -118,7 +118,7 @@ h1 {
   font-weight: bold;       /* Make it bold */
   color: #0a0786;          /* blue color */
   margin-top: 15px;
-  animation: flash 1s infinite alternate; /* Flashing animation */
+ /* animation: flash 1s infinite alternate;*/ /* Flashing animation */
 }
 
 /* Keyframes for flashing effect */
